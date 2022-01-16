@@ -1,13 +1,52 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+	.btn {
+		@apply py-3 px-8 w-fit h-fit rounded-[100px] cursor-pointer hover:scale-110 hover:transition-all font-semibold hover:transition-all;
+	}
+	.btn-blue {
+		@apply bg-blue-prim text-white hover:bg-white hover:text-blue-prim hover:scale-110;
+	}
+	.btn-purple {
+		@apply bg-purple-prim text-white font-bold hover:scale-110 hover:text-purple-prim hover:bg-white;
+	}
+
+	.btn-white {
+		@apply bg-white text-blue-prim hover:scale-110 hover:text-white hover:bg-blue-prim;
+	}
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.blue-background {
+	background: linear-gradient(
+		119.18deg,
+		rgba(65, 190, 229, 0.2) -0.52%,
+		rgba(65, 190, 229, 0.1) 90.72%
+	);
+}
+
+/* Delete carousell arrow */
+.sc-bdvvtL {
+	display: none;
+}
+
+/* adjust carousell content */
+.izuVIe {
+	gap: 10%;
+}
+
+/* carousell button */
+.lcUbOd {
+	background-color: white !important;
+	box-shadow: 0 0 1px 3px #41bee5 !important;
+}
+.eaptOe {
+	background-color: #41bee5 !important;
+	box-shadow: none !important;
+}
+.curve {
+	height: 150%;
+	/* border */
+	border-bottom-right-radius: 150% 150%;
+	border-bottom-left-radius: 120% 150%;
 }
